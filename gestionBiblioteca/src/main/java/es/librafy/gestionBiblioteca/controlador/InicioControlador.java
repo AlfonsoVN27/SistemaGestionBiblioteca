@@ -56,7 +56,7 @@ public class InicioControlador {
 	        Parent root = loader.load();
 
 	        // Obtener el controlador de la interfaz de inicio de sesión del admin
-	        ISAdminControlador controller = loader.getController();
+	        ISUsuarioControlador controller = loader.getController();
 
 	        // Pasar la referencia de la ventana anterior
 	        Stage currentStage = (Stage) btn_usuario.getScene().getWindow();
