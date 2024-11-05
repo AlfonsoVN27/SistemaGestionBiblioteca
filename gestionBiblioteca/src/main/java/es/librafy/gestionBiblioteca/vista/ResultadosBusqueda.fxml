@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="es.librafy.gestionBiblioteca.controlador.ResultadosBusquedaControlador">
+
+    <!-- Título de la ventana de resultados de búsqueda -->
+    <Label text="Resultados de la Búsqueda" style="-fx-font-size: 20px; -fx-padding: 10;"
+           AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"/>
+    
+    <!-- Contenedor de resultados de búsqueda con los libros encontrados -->
+    <TilePane fx:id="tilePaneResultados" hgap="10" vgap="10"
+              AnchorPane.topAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+              AnchorPane.bottomAnchor="20.0" style="-fx-padding: 10;"/>
+</AnchorPane>
+
+
