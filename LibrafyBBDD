@@ -31,6 +31,9 @@ CREATE TABLE solicitudes (
     disponibilidad ENUM('EN PRÉSTAMO', 'DISPONIBLE') NOT NULL,
     FOREIGN KEY (usuario_id) REFERENCES usuarios(id_usuario),
     FOREIGN KEY (libro_id) REFERENCES libros(id_libro)
+    ALTER TABLE solicitudes
+    ADD COLUMN estado ENUM('pendiente', 'aprobado', 'rechazado') DEFAULT 'pendiente';
+
 );
 
 -- Crear tabla de historial
