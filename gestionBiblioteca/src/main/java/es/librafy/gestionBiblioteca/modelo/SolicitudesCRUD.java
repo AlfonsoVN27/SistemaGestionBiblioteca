@@ -12,6 +12,7 @@ public class SolicitudesCRUD {
             stmt.setInt(2, solicitud.getLibro_id());
             stmt.setString(3, solicitud.getModo_entrega());
             stmt.setString(4, solicitud.getDisponibilidad());
+            stmt.setString(5, solicitud.getEstado());
             stmt.executeUpdate();
         }
     }
@@ -28,7 +29,8 @@ public class SolicitudesCRUD {
                     rs.getInt("usuario_id"),
                     rs.getInt("libro_id"),
                     rs.getString("modo_entrega"),
-                    rs.getString("disponibilidad")
+                    rs.getString("disponibilidad"),
+                    rs.getString("estado")
                 );
             }
         }
@@ -44,6 +46,7 @@ public class SolicitudesCRUD {
             stmt.setString(3, solicitud.getModo_entrega());
             stmt.setString(4, solicitud.getDisponibilidad());
             stmt.setInt(5, solicitud.getId_solicitud());
+            stmt.setString(6, solicitud.getEstado());
             stmt.executeUpdate();
         }
     }
