@@ -6,14 +6,16 @@ public class Solicitudes {
     private int libro_id;
     private String modo_entrega;
     private String disponibilidad;
+    private String estado;
 
-    public Solicitudes(int id_solicitud, int usuario_id, int libro_id, String modo_entrega, String disponibilidad) {
+    public Solicitudes(int id_solicitud, int usuario_id, int libro_id, String modo_entrega, String disponibilidad, String estado) {
         super();
     	this.id_solicitud = id_solicitud;
         this.usuario_id = usuario_id;
         this.libro_id = libro_id;
         this.modo_entrega = modo_entrega;
         this.disponibilidad = disponibilidad;
+        this.estado = estado;
     }
 
     public int getId_solicitud() {
@@ -55,4 +57,12 @@ public class Solicitudes {
     public void setDisponibilidad(String disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
 }
