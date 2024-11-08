@@ -1,6 +1,6 @@
 package es.librafy.gestionBiblioteca.modelo;
 
-public class TablaVistaSolicitudes {
+public class TablaVista {
 	private int id_usuario;
 	private String nombre;
     private String fecha_nacimiento;
@@ -21,11 +21,14 @@ public class TablaVistaSolicitudes {
     private String modo_entrega;
     private String disponibilidad;
     private int id_historial;
+    private String id;
+    private String fechaPrestamo;
+    private String fechaDevolucion;
     
-	public TablaVistaSolicitudes(int id_usuario, String nombre, String fecha_nacimiento, String email, String num_telefono,
+	public TablaVista(int id_usuario, String nombre, String fecha_nacimiento, String email, String num_telefono,
 			String dni, String contrasena, int id_libro, String titulo, String autor, String fecha_prestamo,
 			String fecha_devolucion, String categoria, String estado, int id_solicitud, int usuario_id, int libro_id,
-			String modo_entrega, String disponibilidad, int id_historial) {
+			String modo_entrega, String disponibilidad, int id_historial,String id, String fechaPrestamo, String fechaDevolucion) {
 		super();
 		this.id_usuario = id_usuario;
 		this.nombre = nombre;
@@ -121,14 +124,6 @@ public class TablaVistaSolicitudes {
 		this.titulo = titulo;
 	}
 
-	public String getAutor() {
-		return autor;
-	}
-
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
-
 	public String getFecha_prestamo() {
 		return fecha_prestamo;
 	}
@@ -204,6 +199,47 @@ public class TablaVistaSolicitudes {
 	public int getId_historial() {
 		return id_historial;
 	}
+
+	public void setId_historial(int id_historial) {
+		this.id_historial = id_historial;
+	}
+	// Getter y Setter para id
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    // Getter y Setter para autor
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    // Getter y Setter para fechaPrestamo
+    public String getFechaPrestamo() {
+        return fechaPrestamo;
+    }
+
+    public void setFechaPrestamo(String fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
+    }
+
+    // Getter y Setter para fechaDevolucion
+    public String getFechaDevolucion() {
+        return fechaDevolucion;
+    }
+
+    public void setFechaDevolucion(String fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
+    }
+}
+
 
 	public void setId_historial(int id_historial) {
 		this.id_historial = id_historial;
