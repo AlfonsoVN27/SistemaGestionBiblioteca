@@ -69,7 +69,6 @@ public class GestionLibrosControlador {
     
     @FXML
 	 public void initialize() {
-	     // Configuración de columnas
 	     idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
 	     tituloColumn.setCellValueFactory(new PropertyValueFactory<>("titulo"));
 	     autorColumn.setCellValueFactory(new PropertyValueFactory<>("autor"));
@@ -136,7 +135,6 @@ public class GestionLibrosControlador {
     
     @FXML
     public void añadirLibro() {
-        // Crear un nuevo libro a partir de los campos de entrada
         String id = idLibro.getText();
         String tituloLibro = titulo.getText();
         Integer autorLibro = Integer.parseInt(autor.getText());
@@ -145,7 +143,6 @@ public class GestionLibrosControlador {
         String categoriaLibro = categoria.getValue();
         String estadoLibro = estado.getValue();
 
-        // Crear y añadir un nuevo objeto TablaVista a la lista
         TablaVista nuevoLibro = new TablaVista(autorLibro, id, estadoLibro, estadoLibro, estadoLibro, estadoLibro, estadoLibro, autorLibro, fechaPrestamo, fechaDevolucion, estadoLibro, estadoLibro, estadoLibro, estadoLibro, autorLibro, autorLibro, autorLibro, estadoLibro, estadoLibro, autorLibro, estadoLibro, estadoLibro, estadoLibro);
         nuevoLibro.setTitulo(tituloLibro);
         nuevoLibro.setCategoria(categoriaLibro);
@@ -153,13 +150,11 @@ public class GestionLibrosControlador {
 
         listaLibros.add(nuevoLibro);
 
-        // Limpiar campos de entrada después de añadir
         limpiarCampos();
     }
 
     @FXML
     public void modificarLibro() {
-        // Obtener el libro seleccionado en la tabla
         TablaVista libroSeleccionado = tablaLibros.getSelectionModel().getSelectedItem();
 
         if (libroSeleccionado != null) {
@@ -171,15 +166,12 @@ public class GestionLibrosControlador {
             libroSeleccionado.setFechaDevolucion(fechaDev.getText());
             libroSeleccionado.setCategoria(categoria.getValue());
             libroSeleccionado.setEstado(estado.getValue());
-
-            // Refrescar la tabla para mostrar los cambios
             tablaLibros.refresh();
         }
     }
 
     @FXML
     public void eliminarLibro() {
-        // Obtener el libro seleccionado en la tabla y eliminarlo
         TablaVista libroSeleccionado = tablaLibros.getSelectionModel().getSelectedItem();
         if (libroSeleccionado != null) {
             listaLibros.remove(libroSeleccionado);
