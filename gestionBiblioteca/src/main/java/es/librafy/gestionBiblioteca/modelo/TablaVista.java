@@ -238,11 +238,5 @@ public class TablaVista {
     public void setFechaDevolucion(String fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
-}
+}    
 
-
-	public void setId_historial(int id_historial) {
-		this.id_historial = id_historial;
-	}
-    
-}
