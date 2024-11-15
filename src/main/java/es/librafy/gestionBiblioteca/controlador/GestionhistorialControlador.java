@@ -4,11 +4,15 @@ import es.librafy.gestionBiblioteca.modelo.TablaVista;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 public class GestionhistorialControlador {
 
@@ -16,6 +20,8 @@ public class GestionhistorialControlador {
     private Button btnDevolver;
     @FXML
     private Button btnRenovar;
+    @FXML
+    private Button btn_volver;
     @FXML
     private ComboBox<String> estado;
     @FXML
@@ -70,6 +76,22 @@ public class GestionhistorialControlador {
         if (libroSeleccionado != null) {
             libroSeleccionado.setEstado("En prestamo");
             tablaHistorial.refresh();
+        }
+    }
+    @FXML
+    private void volver() {
+        Stage stage = (Stage) btn_volver.getScene().getWindow();
+        stage.close();
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/es/librafy/gestionBiblioteca/vista/AdminPrincipal.fxml"));
+            Parent root = loader.load();
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+            newStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error al intentar abrir la ventana anterior.");
         }
     }
 }
