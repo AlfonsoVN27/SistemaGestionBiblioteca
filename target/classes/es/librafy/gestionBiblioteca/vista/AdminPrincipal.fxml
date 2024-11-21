@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.librafy.gestionBiblioteca.controlador.AdminPrincipalControlador">
+   <children>
+      <ImageView fitHeight="94.0" fitWidth="912.0">
+         <image>
+            <Image url="@/imagenes/banner_areaAdmin.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="157.0" prefHeight="5.0" prefWidth="912.0" style="-fx-padding: 5;" />
+      <Button fx:id="btn_volver" layoutX="826.0" layoutY="104.0" mnemonicParsing="false" onAction="#volver" style="-fx-background-color: transparent;" text="Volver">
+         <font>
+            <Font name="Georgia" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="10.0" fitWidth="10.0" layoutX="876.0" layoutY="111.0">
+         <image>
+            <Image url="@/imagenes/flecha_volver.png" />
+         </image>
+      </ImageView>
+      <Separator layoutY="423.0" prefHeight="5.0" prefWidth="912.0" style="-fx-padding: 5;" />
+      <Label layoutX="320.0" layoutY="442.0" text="© 2024 Librafy, Inc. Todos los derechos reservados." />
+      <Button fx:id="btn_gestionLibros" layoutX="152.0" layoutY="281.0" mnemonicParsing="false" onAction="#irGestionLibros" prefHeight="34.0" prefWidth="166.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #0066FF;" text="Gestión Libros" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_gestionSolicitudes" layoutX="373.0" layoutY="281.0" mnemonicParsing="false" onAction="#irGestionSolicitudes" prefHeight="34.0" prefWidth="166.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #0066FF;" text="Gestión Solicitudes" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_gestionUsuarios" layoutX="593.0" layoutY="281.0" mnemonicParsing="false" onAction="#irGestionUsuarios" prefHeight="34.0" prefWidth="166.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #0066FF;" text="Gestión Usuarios" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Button>
+      <Separator layoutX="127.0" layoutY="252.0" prefHeight="10.0" prefWidth="657.0" />
+      <Separator layoutX="127.0" layoutY="337.0" prefHeight="10.0" prefWidth="657.0" />
+      <Label layoutX="312.0" layoutY="197.0" text="Gestión Administrativa">
+         <font>
+            <Font name="Tahoma Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="780.0" layoutY="256.0" orientation="VERTICAL" prefHeight="85.0" prefWidth="10.0" />
+      <Separator layoutX="124.0" layoutY="256.0" orientation="VERTICAL" prefHeight="85.0" prefWidth="10.0" />
+      <Label fx:id="lblNombre" layoutX="206.0" layoutY="116.0" prefHeight="32.0" prefWidth="271.0">
+         <font>
+            <Font name="Tahoma" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="34.0" fitWidth="29.0" layoutX="177.0" layoutY="115.0">
+         <image>
+            <Image url="@/imagenes/separador_negro.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="116.0" text="Administrador">
+         <font>
+            <Font name="Tahoma" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
