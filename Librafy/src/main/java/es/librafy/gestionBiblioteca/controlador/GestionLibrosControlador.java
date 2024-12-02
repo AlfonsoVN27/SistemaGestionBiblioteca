@@ -150,8 +150,6 @@ public class GestionLibrosControlador {
     }
 
     public static Libros obtenerLibroPorTitulo(String tituloLibro) {
-        // Lógica para obtener los detalles del libro de la base de datos
-        // Ejemplo usando JDBC (esto es solo un ejemplo, necesitarías adaptarlo a tu implementación)
         String query = "SELECT * FROM libros WHERE titulo = ?";  // Cambio aquí de 'nombre' a 'titulo'
         
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/librafybbdd", "root", "");
