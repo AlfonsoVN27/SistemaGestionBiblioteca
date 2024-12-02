@@ -150,7 +150,7 @@ public class GestionLibrosControlador {
     }
 
     public static Libros obtenerLibroPorTitulo(String tituloLibro) {
-        String query = "SELECT * FROM libros WHERE titulo = ?";  // Cambio aquí de 'nombre' a 'titulo'
+        String query = "SELECT * FROM libros WHERE titulo = ?";  
         
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/librafybbdd", "root", "");
              PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -163,7 +163,7 @@ public class GestionLibrosControlador {
                 // Crear un objeto Libros con los datos obtenidos
                 return new Libros(
                     rs.getInt("id_libro"),
-                    rs.getString("titulo"),  // Cambio aquí de 'nombre' a 'titulo'
+                    rs.getString("titulo"),  
                     rs.getString("autor"),
                     rs.getString("fecha_prestamo"),
                     rs.getString("fecha_devolucion"),
@@ -228,7 +228,7 @@ public class GestionLibrosControlador {
     private boolean esFechaValida(String fecha) {
         try {
             SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
-            formato.setLenient(false); // Esto asegura que las fechas no sean ambiguas, por ejemplo 30 de febrero
+            formato.setLenient(false); 
             formato.parse(fecha);
             return true;
         } catch (ParseException e) {
